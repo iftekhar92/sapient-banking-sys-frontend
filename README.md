@@ -24,3 +24,4 @@ This application is used for frontend for a mini banking system.
 
 -------------------------------
 APP URL: http://localhost:4000
+Live URL: https://main.d19r9capnmfdui.amplifyapp.com
