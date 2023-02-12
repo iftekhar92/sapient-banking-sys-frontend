@@ -65,8 +65,9 @@ const UpdateProfile: React.FC = () => {
         setValue("occupation", occupation);
         setImageValue(profilePic);
         if (profilePic) {
+          const basePath = process.env.REACT_APP_ENV === 'local' ? process.env.REACT_APP_GATEWAY_LOCAL : process.env.REACT_APP_GATEWAY_LIVE;
           setImageSrc(
-            `${process.env.REACT_APP_GATEWAY_LOCAL}/images/profile/${profilePic}`
+            `${basePath}/images/profile/${profilePic}`
           );
         }
         setLoader(false);

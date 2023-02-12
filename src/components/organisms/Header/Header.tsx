@@ -37,6 +37,7 @@ const Header: React.FC<Props> = ({ isMobile }) => {
 
   const ProfileImage:React.FC<{profilePic:string}> = ({profilePic}) => {
     if (profilePic) {
+      const basePath = process.env.REACT_APP_ENV === 'local' ? process.env.REACT_APP_GATEWAY_LOCAL : process.env.REACT_APP_GATEWAY_LIVE;
       return (
         <Anchor
           href="#"
@@ -47,7 +48,7 @@ const Header: React.FC<Props> = ({ isMobile }) => {
           }}
         >
           <Image
-            src={`${process.env.REACT_APP_GATEWAY_LOCAL}/images/profile/${profilePic}`}
+            src={`${basePath}/images/profile/${profilePic}`}
           />
         </Anchor>
       );
